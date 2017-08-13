@@ -12,15 +12,14 @@ public class BinarySearch {
 			} else {
 				return middle;
 			}
-		
 		}
-		return result;
+		return -1;
 	}
 	
 	public static void main(String[] args) {
 		BinarySearch b = new BinarySearch();
 		int[] arr = {1,3,5,8,10};
-		System.out.println(b.binarySearch(arr, 3));
+		System.out.println(b.binarySearch(arr, 10));
 	
 	}
 
