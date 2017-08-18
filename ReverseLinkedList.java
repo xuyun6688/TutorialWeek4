@@ -1,7 +1,13 @@
+import java.util.LinkedList;
+
 public class ReverseLinkedList {
-	public void reverse(LinkedList<int> list) {
-		int first = 0;
-		int last = list.size - 1;
+	public void reverse(LinkedList<Integer> list) {
+		Node h = ml.getHead();
+		while (h != null) {
+			
+			h = h.next;
+		}
+		
 		for (; first <= last; first++, last--) {
 			node temp = list.get(last);
 			node tempPrev = list.get(last).prev;
@@ -17,7 +23,8 @@ public class ReverseLinkedList {
 	}
 	
 	public static void main(String[] args) {
-		ReverseLinkedList<int> r = new ReverseLinkedList<int>();
+		ReverseLinkedList r = new ReverseLinkedList();
+		LinkedList<Intger> list = new LinkedList<Integer>();
 		list.add(1);
 		list.add(2);
 		list.add(3);
