@@ -24,6 +24,14 @@ public class SortedLinkedList {
 	public void insert(int val) {
 		if (head != null) {
 			Node n = head;
+			if (val < n.val) {
+				Node newNode = new Node();
+				newNode.val = val;
+				newNode.next = n;
+				head = newNode;
+				return;
+			}
+			
 			while (n.next != null) {
 				if (n.val < val && n.next.val > val) {
 					Node newNode = new Node();
@@ -67,6 +75,13 @@ public class SortedLinkedList {
 		}
 		System.out.println();
 		ml.insert(9);
+		h = ml.getHead();
+		while (h != null) {
+			System.out.print(h.val + "->");
+			h = h.next;
+		}
+		System.out.println();
+		ml.insert(0);
 		h = ml.getHead();
 		while (h != null) {
 			System.out.print(h.val + "->");
