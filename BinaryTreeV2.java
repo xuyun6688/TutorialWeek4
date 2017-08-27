@@ -1,10 +1,5 @@
 public class BinaryTreeV2 {
 	
-	/**
-	 * 
-	 * 内部节点类
-	 * @author yhh
-	 */
 	private class Node{
 		private Node left;
 		private Node right;
@@ -16,11 +11,6 @@ public class BinaryTreeV2 {
 		}
 	}
 	
-	/**
-	 * 递归创建二叉树
-	 * @param input
-	 * @param index
-	 */
 	public Node buildTree(int[] input,int index){
 		if(index<=input.length){
 			Integer value = input[index-1];
@@ -34,10 +24,6 @@ public class BinaryTreeV2 {
 		return null;
 	}
 	
-	/**
-	 * 前序遍历
-	 * @param node
-	 */
 	public void preOrder(Node node){
 		if(node != null){
 			System.out.println(node.data);
@@ -46,10 +32,6 @@ public class BinaryTreeV2 {
 		}
 	}
 	
-	/**
-	 * 中序遍历
-	 * @param node
-	 */
 	public void inOrder(Node node){
 		if(node != null){
 			inOrder(node.left);
@@ -58,10 +40,6 @@ public class BinaryTreeV2 {
 		}
 	}
 	
-	/**
-	 * 后序遍历
-	 * @param node
-	 */
 	public void postOrder(Node node){
 		if(node != null){
 			postOrder(node.left);
